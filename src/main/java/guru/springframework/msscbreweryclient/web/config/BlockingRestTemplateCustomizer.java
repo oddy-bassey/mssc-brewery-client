@@ -37,6 +37,6 @@ public class BlockingRestTemplateCustomizer implements RestTemplateCustomizer {
 
     @Override
     public void customize(RestTemplate restTemplate) {
-
+        restTemplate.setRequestFactory(this.clientHttpRequestFactory());
     }
 }
